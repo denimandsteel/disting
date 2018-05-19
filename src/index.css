@@ -3,3 +3,84 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+header {
+  padding: 10px;
+  background: #222;
+}
+
+.results {
+  /*padding: 10px;*/
+}
+
+.quicklinks {
+  padding: 5px 0 0 5px;
+}
+.quicklink {
+  display: inline-block;
+  background: gold;
+  color: #222;
+  border-radius: 5px;
+  padding: 2px 5px 2px;
+  margin: 0 5px 5px 0;
+  font-weight: bold;
+}
+
+.algorithm {
+  padding: 5px 5px;
+}
+.algorithm:nth-child(odd) {
+  background: #eee;
+}
+.algorithm .code {
+  text-align: center;
+  display: inline-block;
+  width: 35px;
+  background: #555;
+  color: #efefef;
+  border-radius: 5px;
+  padding: 2px 0 1px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.wires {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.input, .output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #555;
+  color: #555;
+  border-radius: 100%;
+  padding: 0;
+  margin-right: 5px;
+}
+.output {
+  background: #555;
+  color: #efefef;
+}
+
+.extra {}
+.extra.knob_recorder {
+  color: green;
+}
+.extra.tap_tempo {
+  color: red;
+}
+
+.algorithm .description {
+  padding: 5px;
+  background: white;
+  border-radius: 5px;
+  margin: 5px 0 0;
+}
+
+.algorithm .description .full {
+  margin-top: 1em;
+}
