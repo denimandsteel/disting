@@ -32,9 +32,9 @@ class Algorithm extends Component {
     }
     return (
       <div className="algorithm">
-        <div onClick={this.toggleOpen}>
-          <span class="code">{code}</span>
-          {name}
+        <div className="header" onClick={this.toggleOpen}>
+          <div><span class="code">{code}</span></div>
+          <div class="name">{name}</div>
         </div>
         {this.state.open && (
           <div className="description">

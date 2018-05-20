@@ -34,8 +34,8 @@ class App extends Component {
     return (
       <div>
         <header>
-          <input type="text" value={this.state.search} onChange={(e) => { this.filterList(e.target.value) } } />
-          <span className="quicklink" onClick={() => { this.filterList('') } }>clear</span>
+          <input type="text" value={this.state.search} placeholder="Search" onChange={(e) => { this.filterList(e.target.value) } } />
+          <span className="quicklink" onClick={() => { this.filterList('') } }><span>clear</span></span>
         </header>
         <div className="quicklinks">
           <span className="quicklink" onClick={() => { this.filterList('vco') } }>vco</span>
