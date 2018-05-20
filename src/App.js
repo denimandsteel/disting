@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { algorithms } from './data';
-import Algorithm from './components/Algorithm';
+import Algorithm from './Algorithm';
 import Fuse from 'fuse.js';
 
 const quicklinks = [
@@ -64,7 +64,7 @@ class App extends Component {
         ) : (
           <div>
             <div className="quicklinks">
-              {quicklinks.map(quicklink => <span className={this.state.search === quicklink ? "quicklink active" : "quicklink"} onClick={() => { this.filterList(quicklink) } }>{quicklink}</span>)}
+              {quicklinks.map(quicklink => <span key={quicklink} className={this.state.search === quicklink ? "quicklink active" : "quicklink"} onClick={() => { this.filterList(quicklink) } }>{quicklink}</span>)}
             </div>
             <div className="results">
               {this.state.filteredAlgorithms.map(algorithm => <Algorithm key={algorithm.code} algorithm={algorithm}/>)}

@@ -150,8 +150,8 @@ body.dark .algorithm:nth-child(odd) {
   color: #222;
   border-radius: 100%;
   padding: 0;
-  margin-right: 8px;
-  margin-top: 3px;
+  margin-right: 10px;
+  margin-bottom: 2px;
 }
 .input span, .output span {
   margin-left: 2px;
@@ -168,6 +168,7 @@ body.dark .input {
 body.dark .output {
   background: #ccc;
   color: #222;
+  border-color: #ccc;
 }
 
 .extra {}
