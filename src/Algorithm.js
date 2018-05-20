@@ -28,8 +28,12 @@ class Algorithm extends Component {
       video,
       parameters,
     } } = this.props;
+    let embed = null;
     if (video) {
-      const youtubeId = video.match(/v=(.+)$/);
+      let matches = video.match(/v=(.+)$/)
+      if (matches) {
+        embed = "https://www.youtube.com/embed/" + matches[1];
+      }
     }
     return (
       <div className="algorithm">
@@ -48,15 +52,19 @@ class Algorithm extends Component {
               return (<div key={item} className={'extra ' + item}>*{extras[item]}</div>);
             })}
             <div className="full" dangerouslySetInnerHTML={{ __html: description }}/>
-            <div>{video}</div>
-            {parameters && (
+            {embed && (
+              <div className="embed-container">
+                <iframe width="560" height="315" src={embed} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+              </div>
+            )}
+            {parameters.length > 0 && (
               <table>
                 <thead>
                   <tr>
-                    <th>P</th>
+                    <th>Param</th>
                     <th>Min</th>
                     <th>Max</th>
-                    <th>Def</th>
+                    <th>Default</th>
                     <th>Description</th>
                   </tr>
                 </thead>

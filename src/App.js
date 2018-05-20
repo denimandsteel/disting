@@ -46,6 +46,9 @@ class App extends Component {
     this.setState({ showInfo: !this.state.showInfo });
   }
   filterList(filter) {
+    if (this.state.search === filter) {
+      filter = '';
+    }
     this.setState({
       search: filter,
       filteredAlgorithms: filter.length > 0 ? this.state.fuse.search(filter) : algorithms,
