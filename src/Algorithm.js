@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 const extras = {
   knob_recorder: 'Knob recorder enabled',
   tap_tempo: 'Tap tempo enabled',
-
+  midi_support: 'Outputs & Receives MIDI',
+  z_trigger: 'Press Z to trigger'
 }
 
 class Algorithm extends Component {
