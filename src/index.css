@@ -47,6 +47,7 @@ input {
   padding: 2px 5px 4px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  width: 0;
 }
 
 .results {
@@ -74,6 +75,10 @@ input {
   font-size: 1.21rem;
   /*font-weight: bold;*/
 }
+.quicklink.active {
+  color: #111;
+  background: #ff9005;
+}
 header .quicklink {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -83,6 +88,10 @@ header .quicklink {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+}
+header .quicklink.info {
+  margin-left: 5px;
+  border-radius: 5px;
 }
 
 .algorithm {
@@ -180,4 +189,9 @@ body.dark .algorithm .description {
 .algorithm .description .full {
   margin-top: 1em;
   font-size: 1.2rem;
+}
+
+.info {
+  font-size: 1.2rem;
+  padding: 0 5px;
 }

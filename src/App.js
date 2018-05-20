@@ -3,11 +3,27 @@ import { algorithms } from './data';
 import Algorithm from './components/Algorithm';
 import Fuse from 'fuse.js';
 
+const quicklinks = [
+  'vco',
+  'lfo',
+  'quantizer',
+  'envelope',
+  'filter',
+  'audio',
+  'midi',
+  'shift',
+  'delay',
+  'dual',
+  'effect',
+  'utility',
+];
+
 class App extends Component {
   constructor() {
     super()
     this.state = {
       search: '',
+      showInfo: false,
       filteredAlgorithms: algorithms,
       fuse: new Fuse(algorithms, {
         // keys: ['meta', 'tag']
@@ -23,6 +39,11 @@ class App extends Component {
         ]
       })
     }
+    this.toggleInfo = this.toggleInfo.bind(this);
+  }
+  toggleInfo() {
+    console.log('ayy', this.state.showInfo)
+    this.setState({ showInfo: !this.state.showInfo });
   }
   filterList(filter) {
     this.setState({
@@ -36,24 +57,20 @@ class App extends Component {
         <header>
           <input type="text" value={this.state.search} placeholder="Search" onChange={(e) => { this.filterList(e.target.value) } } />
           <span className="quicklink" onClick={() => { this.filterList('') } }><span>clear</span></span>
+          <span className={this.state.showInfo ? "quicklink info active" : "quicklink info" } onClick={this.toggleInfo}><span>info</span></span>
         </header>
-        <div className="quicklinks">
-          <span className="quicklink" onClick={() => { this.filterList('vco') } }>vco</span>
-          <span className="quicklink" onClick={() => { this.filterList('lfo') } }>lfo</span>
-          <span className="quicklink" onClick={() => { this.filterList('quantizer') } }>quantizer</span>
-          <span className="quicklink" onClick={() => { this.filterList('envelope') } }>envelope</span>
-          <span className="quicklink" onClick={() => { this.filterList('filter') } }>filter</span>
-          <span className="quicklink" onClick={() => { this.filterList('audio') } }>audio</span>
-          <span className="quicklink" onClick={() => { this.filterList('midi') } }>midi</span>
-          <span className="quicklink" onClick={() => { this.filterList('shift') } }>shift</span>
-          <span className="quicklink" onClick={() => { this.filterList('delay') } }>delay</span>
-          <span className="quicklink" onClick={() => { this.filterList('dual') } }>dual</span>
-          <span className="quicklink" onClick={() => { this.filterList('effect') } }>effect</span>
-          <span className="quicklink" onClick={() => { this.filterList('utility') } }>utility</span>
-        </div>
-        <div className="results">
-          {this.state.filteredAlgorithms.map(algorithm => <Algorithm key={algorithm.code} algorithm={algorithm}/>)}
-        </div>
+        {this.state.showInfo ? (
+          <div className="info">Hello world!</div>
+        ) : (
+          <div>
+            <div className="quicklinks">
+              {quicklinks.map(quicklink => <span className={this.state.search === quicklink ? "quicklink active" : "quicklink"} onClick={() => { this.filterList(quicklink) } }>{quicklink}</span>)}
+            </div>
+            <div className="results">
+              {this.state.filteredAlgorithms.map(algorithm => <Algorithm key={algorithm.code} algorithm={algorithm}/>)}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

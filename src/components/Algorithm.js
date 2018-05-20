@@ -33,8 +33,8 @@ class Algorithm extends Component {
     return (
       <div className="algorithm">
         <div className="header" onClick={this.toggleOpen}>
-          <div><span class="code">{code}</span></div>
-          <div class="name">{name}</div>
+          <div><span className="code">{code}</span></div>
+          <div className="name">{name}</div>
         </div>
         {this.state.open && (
           <div className="description">
@@ -44,7 +44,7 @@ class Algorithm extends Component {
             <div className="wires"><span className="output"><span>A</span></span> {A}</div>
             <div className="wires"><span className="output"><span>B</span></span> {B}</div>
             {extra && extra.map((item) => {
-              return (<div className={'extra ' + item}>*{extras[item]}</div>);
+              return (<div key={item} className={'extra ' + item}>*{extras[item]}</div>);
             })}
             <div className="full" dangerouslySetInnerHTML={{ __html: description }}/>
             <div>{video}</div>
