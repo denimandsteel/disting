@@ -354,7 +354,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=iBtg8CJtC1E',
-    parameters: [],
+    parameters: [
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for output A',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for output B',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Sets an offset for output A',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Sets an offset for output B',
+      },
+    ],
   },
   {
     code: 'B6',
@@ -367,7 +392,14 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=_ZqZtVd8eLI',
-    parameters: [],
+    parameters: [
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for both LFO outputs',
+      },
+    ],
   },
   {
     code: 'B7',
@@ -380,7 +412,26 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=5JPUuaPaxxo',
-    parameters: [],
+    parameters: [
+      {
+        min: -16,
+        max: 8,
+        default: 0,
+        description: 'Octave shift',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for output A',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for output B',
+      },
+    ],
   },
   {
     code: 'B8',
@@ -393,7 +444,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=8JDX9bjcG3o',
-    parameters: [],
+    parameters: [
+      {
+        min: -16,
+        max: 8,
+        default: 0,
+        description: 'Octave shift',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for output A',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Sets an attenuation for output B',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Offset for input Y (manual shape control)',
+      },
+    ],
   },
   {
     code: 'C1',
@@ -406,7 +482,14 @@ export const algorithms = [
     extra: ['knob_recorder'],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: 1,
+        max: 12,
+        default: 12,
+        description: 'Sets the offset divisor',
+      },
+    ],
   },
   {
     code: 'C2',
@@ -419,7 +502,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=xirCtbaCRUA',
-    parameters: [],
+    parameters: [
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Applies an offset to the Y input',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -433,7 +523,26 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=3pHSGoLNGuQ',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Output mode',
+      },
+      {
+        min: -15,
+        max: 8,
+        default: 0,
+        description: 'Delay time multiplier',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: -32,
+        description: 'Input pan',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -447,7 +556,26 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=WdUGXBpLFt4',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 24,
+        description: 'Feedback',
+      },
+      {
+        min: -15,
+        max: 8,
+        default: 0,
+        description: 'Delay time multiplier',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Output mode',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -461,7 +589,14 @@ export const algorithms = [
     extra: ['z_trigger'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=uqnreY1yVd8',
-    parameters: [],
+    parameters: [
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Applies an offset to the Y input',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -475,7 +610,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=bYlP8Q03Xl4',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Selects the filter bank',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -489,7 +631,20 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=XLxi45ONXVA',
-    parameters: [],
+    parameters: [
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Applies an offset to the Y input',
+      },
+      {
+        min: 1,
+        max: 10,
+        default: 10,
+        description: 'Sets the number of phaser stages',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -503,7 +658,26 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=Tv5c8gPYwFs',
-    parameters: [],
+    parameters: [
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Applies an offset to the Y input',
+      },
+      {
+        min: 0,
+        max: 7,
+        default: 0,
+        description: 'Selects the bit reduction mode',
+      },
+      {
+        min: 0,
+        max: 7,
+        default: 0,
+        description: 'Selects the bit mangling mode',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -517,7 +691,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=yvoYk0w1Loo',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 43,
+        default: 43,
+        description: 'Tape length',
+      },
+      {
+        min: -9,
+        max: 9,
+        default: 0,
+        description: 'Fine length control',
+      },
+      {
+        min: -8,
+        max: 16,
+        default: 0,
+        description: 'Tape speed',
+      },
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Output mode',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -531,7 +730,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=htkdsLm0oa8',
-    parameters: [],
+    parameters: [
+      {
+        min: -1,
+        max: 31,
+        default: 11,
+        description: 'LFO depth',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Y offset',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 23,
+        description: 'LFO rate',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: -1,
+        description: 'Scale',
+      },
+    ],
   },
   {
     code: 'D4',
@@ -544,7 +768,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=7sIsahePBHA',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 0,
+        description: 'Filter resonance',
+      },
+    ],
   },
   {
     code: 'D5',
@@ -609,7 +840,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=CCae5gjnfrc',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Trigger Mode',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Z Mode',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'E2',
@@ -622,7 +878,14 @@ export const algorithms = [
     extra: ['z_trigger'],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Trigger Mode',
+      },
+    ],
   },
   {
     code: 'E3',
@@ -635,7 +898,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=mC7AxLqseVc',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Trigger Mode',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Z Mode',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'E4',
@@ -648,7 +936,14 @@ export const algorithms = [
     extra: ['z_trigger'],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Trigger Mode',
+      },
+    ],
   },
   {
     code: 'E5',
@@ -661,7 +956,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=xnTesaYXU7Y',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Trigger Mode',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Z Mode',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'E6',
@@ -674,7 +994,14 @@ export const algorithms = [
     extra: ['z_trigger'],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Trigger Mode',
+      },
+    ],
   },
   {
     code: 'E7',
@@ -687,7 +1014,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: -8,
+        max: 8,
+        default: 0,
+        description: 'Octave shift',
+      },
+    ],
   },
   {
     code: 'E8',
@@ -700,7 +1034,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: -8,
+        max: 8,
+        default: 0,
+        description: 'Octave shift',
+      },
+    ],
   },
   {
     code: 'F1',
@@ -713,7 +1054,26 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=LlM3GRI10Hk',
-    parameters: [],
+    parameters: [
+      {
+        min: -15,
+        max: 8,
+        default: 0,
+        description: 'Delay time multiplier',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'F2',
@@ -726,7 +1086,26 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=7H4rT9ClRFI',
-    parameters: [],
+    parameters: [
+      {
+        min: -15,
+        max: 8,
+        default: 0,
+        description: 'Delay time multiplier',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'F3',
@@ -739,7 +1118,26 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=xQ4dGCsA1eo',
-    parameters: [],
+    parameters: [
+      {
+        min: -15,
+        max: 8,
+        default: 0,
+        description: 'Delay time multiplier',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'F4',
@@ -752,7 +1150,26 @@ export const algorithms = [
     extra: ['tap_tempo'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=rl5xEyjxXvk',
-    parameters: [],
+    parameters: [
+      {
+        min: -15,
+        max: 8,
+        default: 0,
+        description: 'Delay time multiplier',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output A Attenuverter',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Output B Attenuverter',
+      },
+    ],
   },
   {
     code: 'F5',
@@ -765,7 +1182,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=3sSr0X3vaDI',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Direction',
+      },
+      {
+        min: 1,
+        max: 16,
+        default: 8,
+        description: 'Length',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 0,
+        description: 'Slew rate',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Output attenuator',
+      },
+    ],
   },
   {
     code: 'F6',
@@ -778,7 +1220,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=hDI8juYrebw',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Direction',
+      },
+      {
+        min: 1,
+        max: 16,
+        default: 8,
+        description: 'Length',
+      },
+      {
+        min: 0,
+        max: 15,
+        default: 0,
+        description: 'Scale',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Output attenuator',
+      },
+    ],
   },
   {
     code: 'F7',
@@ -791,7 +1258,14 @@ export const algorithms = [
     extra: ['z_trigger'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=4HqIG_Brzxg',
-    parameters: [],
+    parameters: [
+      {
+        min: 1,
+        max: 16,
+        default: 8,
+        description: 'Length',
+      },
+    ],
   },
   {
     code: 'F8',
@@ -804,7 +1278,20 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=b3gnEJikp9M',
-    parameters: [],
+    parameters: [
+      {
+        min: 1,
+        max: 16,
+        default: 8,
+        description: 'Length A',
+      },
+      {
+        min: 1,
+        max: 16,
+        default: 8,
+        description: 'Length B',
+      },
+    ],
   },
   {
     code: 'G1',
@@ -845,7 +1332,20 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=MID1aSrWX7o',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 11,
+        default: 0,
+        description: 'Semitone',
+      },
+      {
+        min: -1,
+        max: 9,
+        default: 4,
+        description: 'Octave',
+      },
+    ],
     keywords: 'utility',
   },
   {
@@ -887,7 +1387,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=af6eHIYT2Ww',
-    parameters: [],
+    parameters: [
+      {
+        min: -2,
+        max: 12,
+        default: 6,
+        description: 'Clock divisor for A',
+      },
+      {
+        min: -2,
+        max: 12,
+        default: -2,
+        description: 'Clock divisor for B',
+      },
+      {
+        min: 0,
+        max: 11,
+        default: 8,
+        description: 'Clock divisor for MIDI clock output',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Y mode',
+      },
+    ],
   },
   {
     code: 'G7',
@@ -900,7 +1425,26 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=1ArqOPnezdo',
-    parameters: [],
+    parameters: [
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Transpose',
+      },
+      {
+        min: 0,
+        max: 24,
+        default: 2,
+        description: 'Pitch bend depth',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: -1,
+        description: 'Scale',
+      },
+    ],
   },
   {
     code: 'G8',
@@ -913,7 +1457,20 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=JLomApKB30E',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 99,
+        default: 16,
+        description: 'Channel offset',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Z mode',
+      },
+    ],
   },
   {
     code: 'H1',
@@ -926,7 +1483,14 @@ export const algorithms = [
     extra: ['knob_recorder'],
     description: ``,
     video: 'https://www.youtube.com/watch?v=Ar7Gym6SOSE',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 2,
+        default: 0,
+        description: 'Crossfade/pan law',
+      },
+    ],
   },
   {
     code: 'H2',
@@ -939,7 +1503,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=d-kA1a9zrx8',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Mode',
+      },
+    ],
   },
   {
     code: 'H3',
@@ -952,7 +1523,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=QkiZ__Kx1EE',
-    parameters: [],
+    parameters: [
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Input X attenuation',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Input Y attenuation',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'X transpose',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Y transpose',
+      },
+    ],
   },
   {
     code: 'H4',
@@ -965,7 +1561,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=Ui3mC0rQ4KU',
-    parameters: [],
+    parameters: [
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Input X attenuation',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Input Y attenuation',
+      },
+      {
+        min: -16,
+        max: 16,
+        default: 0,
+        description: 'X scale/trigger mode',
+      },
+      {
+        min: -16,
+        max: 16,
+        default: 0,
+        description: 'Y scale/trigger mode',
+      },
+    ],
   },
   {
     code: 'H5',
@@ -978,7 +1599,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=Y3E8XvoLLzg',
-    parameters: [],
+    parameters: [
+      {
+        min: 1,
+        max: 16,
+        default: 16,
+        description: 'Steps',
+      },
+      {
+        min: 1,
+        max: 16,
+        default: 4,
+        description: 'Pulses (pattern 1)',
+      },
+      {
+        min: 0,
+        max: 16,
+        default: 0,
+        description: 'Rotation',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 0,
+        description: 'Pulse length',
+      },
+    ],
   },
   {
     code: 'H6',
@@ -991,7 +1637,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=7UW7IQYfFyQ',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 6,
+        default: 0,
+        description: 'Z mode',
+      },
+      {
+        min: 0,
+        max: 12,
+        default: 6,
+        description: 'Range',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: -1,
+        description: 'Delay',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 7,
+        description: 'Length',
+      },
+    ],
   },
   {
     code: 'H7',
@@ -1004,7 +1675,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=WBX-4gOPX50',
-    parameters: [],
+    parameters: [
+      {
+        min: -1,
+        max: 3,
+        default: -1,
+        description: 'Type A',
+      },
+      {
+        min: -1,
+        max: 3,
+        default: -1,
+        description: 'Type B',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Attenuation A',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Attenuation B',
+      },
+    ],
   },
   {
     code: 'I1',
@@ -1043,7 +1739,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=djuLLK1pZgk',
-    parameters: [],
+    parameters: [
+      {
+        min: -8,
+        max: 8,
+        default: 0,
+        description: 'Octave shift',
+      },
+    ],
   },
   {
     code: 'I4',
@@ -1056,7 +1759,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=UG0bWiCYbsA',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Selects the sample',
+      },
+    ],
   },
   {
     code: 'I5',
@@ -1069,7 +1779,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=Bft6YD6e91Q',
-    parameters: [],
+    parameters: [
+      {
+        min: -49,
+        max: 49,
+        default: 0,
+        description: 'Y offset',
+      },
+    ],
   },
   {
     code: 'I6',
@@ -1082,7 +1799,26 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=-Z3v_W-s2rI',
-    parameters: [],
+    parameters: [
+      {
+        min: 1,
+        max: 99,
+        default: 16,
+        description: 'Speed limit',
+      },
+      {
+        min: 0,
+        max: 20,
+        default: 0,
+        description: 'Slew limit',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 0,
+        description: 'Y offset',
+      },
+    ],
   },
   {
     code: 'I7',
@@ -1095,7 +1831,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=tBC_KhffiGk',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Selects the panning option',
+      },
+    ],
   },
   {
     code: 'I8',
@@ -1108,7 +1851,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=NIt7VFPQwaw',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Selects sample A',
+      },
+      {
+        min: 0,
+        max: 99,
+        default: 1,
+        description: 'Selects sample B',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Selects the panning option',
+      },
+      {
+        min: 0,
+        max: 3,
+        default: 0,
+        description: 'Select which sample(s) are affected by Z',
+      },
+    ],
   },
   {
     code: 'J1',
@@ -1134,7 +1902,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: '',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 0,
+        description: 'Selects the MIDI file',
+      },
+    ],
   },
   {
     code: 'J4',
@@ -1147,7 +1922,14 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=80pRG39kqlA',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Selects the sample',
+      },
+    ],
   },
   {
     code: 'J5',
@@ -1173,7 +1955,26 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=piNLUIcoEoI',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Chooses the wavetable',
+      },
+      {
+        min: -16,
+        max: 8,
+        default: 0,
+        description: 'Octave shift',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Y offset',
+      },
+    ],
   },
   {
     code: 'K5',
@@ -1186,7 +1987,38 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=fCVvjwelGU8',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 0,
+        description: 'Scale',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 31,
+        description: 'Input X attenuation',
+      },
+      {
+        min: -2,
+        max: 31,
+        default: 31,
+        description: 'Input Y attenuation',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Transpose',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 0,
+        description: 'Offset',
+      },
+    ],
   },
   {
     code: 'L1',
@@ -1199,7 +2031,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=mF5mmdAhE30',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 15,
+        description: 'Size',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 23,
+        description: 'Feedback',
+      },
+      {
+        min: 0,
+        max: 5,
+        default: 1,
+        description: 'Character',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 8,
+        description: 'Lowpass filter',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -1213,7 +2070,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=mF5mmdAhE30',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 15,
+        description: 'Size',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 23,
+        description: 'Feedback',
+      },
+      {
+        min: 0,
+        max: 5,
+        default: 1,
+        description: 'Character',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 8,
+        description: 'Lowpass filter',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -1227,7 +2109,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=mF5mmdAhE30',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 15,
+        description: 'Size',
+      },
+      {
+        min: 0,
+        max: 31,
+        default: 23,
+        description: 'Feedback',
+      },
+      {
+        min: 0,
+        max: 5,
+        default: 1,
+        description: 'Character',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: 8,
+        description: 'Lowpass filter',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -1241,7 +2148,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=snOrmmR5Wfc',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 8,
+        description: 'LFO depth',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Y offset',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Feedback',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: -1,
+        description: 'Lowpass filter',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -1255,7 +2187,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=snOrmmR5Wfc',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 31,
+        default: 8,
+        description: 'LFO depth',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Y offset',
+      },
+      {
+        min: -31,
+        max: 31,
+        default: 0,
+        description: 'Feedback',
+      },
+      {
+        min: -1,
+        max: 31,
+        default: -1,
+        description: 'Lowpass filter',
+      },
+    ],
     keywords: 'effect',
   },
   {
@@ -1269,7 +2226,32 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=SSGc-mr-Q84',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Attack time',
+      },
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Hold time',
+      },
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Release time',
+      },
+      {
+        min: 0,
+        max: 99,
+        default: 0,
+        description: 'Lookahead',
+      },
+    ],
   },
   {
     code: 'M1',
@@ -1282,7 +2264,44 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=Zq6EXlRmh_g',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 6,
+        default: 1,
+        description: 'Output type A',
+      },
+      {
+        min: 0,
+        max: 6,
+        default: 0,
+        description: 'Output type B',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 0,
+        description: 'LFO speed range',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 0,
+        description: 'Ramp time range',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Attenuverter A',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 32,
+        description: 'Attenuverter B',
+      },
+    ],
   },
   {
     code: 'M2',
@@ -1295,6 +2314,43 @@ export const algorithms = [
     extra: [],
     description: ``,
     video: 'https://www.youtube.com/watch?v=NcWLVdAZ50M',
-    parameters: [],
+    parameters: [
+      {
+        min: 0,
+        max: 6,
+        default: 1,
+        description: 'Output type A',
+      },
+      {
+        min: 0,
+        max: 6,
+        default: 0,
+        description: 'Output type B',
+      },
+      {
+        min: -32,
+        max: 32,
+        default: 0,
+        description: 'LFO speed range',
+      },
+      {
+        min: 0,
+        max: 1,
+        default: 0,
+        description: 'Mode',
+      },
+      {
+        min: -48,
+        max: 48,
+        default: 0,
+        description: 'X Offset',
+      },
+      {
+        min: -48,
+        max: 48,
+        default: 0,
+        description: 'Y Offset',
+      },
+    ],
   },
 ];
