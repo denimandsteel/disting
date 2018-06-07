@@ -63,7 +63,7 @@ class App extends Component {
           <span className={this.state.showInfo ? "quicklink info active" : "quicklink info" } onClick={this.toggleInfo}><span>info</span></span>
         </header>
         {this.state.showInfo ? (
-          <div className="info">Hello world!</div>
+          <div className="info">Some description text of what this is and how to use it, any copyright notices or etc stuff.</div>
         ) : (
           <div>
             <div className="quicklinks">
